@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Color de fondo claro */
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+#galeria .carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.dark {
+    background-color: #333; /* Fondo oscuro */
+    color: #ffcc00; /* Color de texto amarillo fuerte */
+}
+
+.light {
+    background-color: #fff; /* Fondo claro */
+    color: #333; /* Color de texto oscuro */
+}
+
+h1, h2, h5, p {
+    transition: color 0.5s; /* Transición suave para el cambio de color */
+}
+
+#label-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1;
+    padding: 8px;
+    font-size: 30px;
+    transition: all 0.5s ease;
+}
+
+#label-toggle:hover {
+    font-size: 35px;
+    transition: all 1.0s ease;
+}
+
+header h1 {
+    font-size: 3rem; /* Tamaño de fuente más grande */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mayor impacto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.dark header h1 {
+    color: #ffcc00; /* Color brillante para el modo oscuro */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative; /* Añadir posición relativa para el submenú */
+}
+
+.nav-card {
+    background-color: #fff; /* Fondo claro para el modo claro */
+    color: #333; /* Color de texto en modo claro */
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 0 10px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-card:hover {
+    background-color: #ffcc00; /* Color de fondo al pasar el mouse */
+    color: #333; /* Color de texto al pasar el mouse */
+}
+
+.dark .nav-card {
+    background-color: #444; /* Fondo oscuro */
+    color: #ffcc00; /* Color de texto brillante en modo oscuro */
+}
+
+.dark .nav-card:hover {
+    background-color: #666; /* Fondo al pasar el mouse en modo oscuro */
+    color: #fff; /* Color de texto al pasar el mouse en modo oscuro */
+}
+.destination-card {
+    transition: transform 0.3s; /* Suaviza la transición */
+}
+
+.destination-card.clicked {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+    background-color: #ffcc00; /* Cambia el color de fondo */
+    color: #333; /* Cambia el color del texto */
+}
+
+/* Evita que los contenedores cambien de tamaño */
+.card {
+    overflow: hidden; /* Asegúrate de que no se muestre contenido extra */
+    position: relative; /* Permite el escalado sin afectar el flujo del documento */
+}
+.sub-menu {
+    display: none;
+    margin-top: 10px;
+    position: absolute;
+    background-color: #fff; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10; 
+}
+
+.sub-menu.show {
+    display: block; 
+}
+
+.sub-menu a {
+    padding: 10px 15px; 
+    color: #333;
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: #ffcc00; 
+    color: #fff;
+}
+
+.nav-container {
+    position: relative; 
+}
+#destinos {
+    background-color: #fff; /* Fondo blanco para la sección */
+    padding: 40px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card {
+    border: none; /* Sin borde */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+.card-title {
+    font-weight: bold; /* Títulos más destacados */
+}
+
+.card-text {
+    font-size: 0.95rem; /* Tamaño de texto más pequeño para el contenido */
+    color: #555; /* Color de texto más suave */
+}
+.card {
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    height: 100%; /* Todas las tarjetas tendrán la misma altura */
+}
+
+.card-body {
+    flex-grow: 1; /* Permite que el contenido crezca para ocupar el espacio disponible */
+}
